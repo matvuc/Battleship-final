@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@400;600;700&display=swap');
+
+/* base layout palette */
+body {
+	font-family: 'Bitcount Single Ink', sans-serif;
+	background-color: #0c1b2a;
+	color: #f0f6ff;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* hero text block */
+#header {
+	margin-top: 24px;
+	text-align: center;
+}
+
+#header h1,
+#header h3 {
+	font-size: 2rem;
+	margin: 0;
+	letter-spacing: 2px;
+}
+
+#header p {
+	margin-top: 8px;
+	font-size: 1rem;
+	opacity: 0.85;
+}
+
+/* board spacing */
+#gameBoard {
+	margin: 24px 0;
+}
+
+#username {
+	font-size: 1.25rem;
+	margin-top: 12px;
+}
+
+/* grid styling */
+#gameTable {
+	border-collapse: collapse;
+	border: 2px solid #18344d;
+}
+
+#gameTable th,
+#gameTable td {
+	border: 1px solid #18344d;
+	text-align: center;
+	width: 45px;
+	height: 45px;
+	box-sizing: border-box;
+	background-color: #10263a;
+	color: #f0f6ff;
+}
+
+#gameTable th {
+	background-color: #132f47;
+}
+
+/* status console */
+#messages {
+	width: 100%;
+	max-width: 500px;
+	min-height: 150px;
+	max-height: 250px;
+	overflow-y: auto;
+	background-color: #10263a;
+	border: 2px solid #18344d;
+	padding: 12px;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+}
+
+#messages p {
+	margin: 4px 0;
+}
+
+/* action buttons */
+button {
+	padding: 10px 16px;
+	margin: 0 8px 16px;
+	background-color: #1f4d72;
+	border: none;
+	color: #f0f6ff;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+button:hover,
+button:focus {
+	background-color: #27618f;
+}
+
+/* entry form */
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 24px;
+	background-color: #10263a;
+	border: 2px solid #18344d;
+	border-radius: 6px;
+	min-width: 280px;
+	box-sizing: border-box;
+	margin-top: 32px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+label {
+	font-weight: 600;
+}
+
+/* form controls */
+input[type="text"] {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #244a68;
+	background-color: #0c1b2a;
+	color: #f0f6ff;
+}
+
+input[type="text"]:focus {
+	outline: 2px solid #27618f;
+}
+
+/* board states */
+.miss {
+	background-color: #335a7d !important;
+}
+
+.hit {
+	background-size: cover;
+	background-position: center;
+}
+
+.sunk {
+	box-shadow: inset 0 0 6px 2px rgba(255, 215, 0, 0.9);
+}
+
+/* ship art hooks */
+.cruiser {
+	background-image: url('../images/cruiser.jpg');
+}
+
+.submarine {
+	background-image: url('../images/submarine.jpg');
+}
+
+.destroyer {
+	background-image: url('../images/destroyer.jpg');
+}
+
+.battleship {
+	background-image: url('../images/battleship.jpg');
+}
+
+.mini-board {
+	max-width: 360px;
+	margin-top: 12px;
+}
+
+.mini-board td {
+	font-size: 12px;
+	text-align: center;
+}
